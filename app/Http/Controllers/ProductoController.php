@@ -12,14 +12,12 @@ class ProductoController extends Controller
 {
 
     public function index(Request $request, ProductoService $product, CategoriaService $CategoriaService, ProveedorService $proovedorService) {
-        $products = $product->getProducto();
-        $categorias = $CategoriaService->getCategories();
-        $proveedores = $proovedorService->getProveedor();
+        $dataView['products'] = $product->getProducto();
+        $dataView['categorias'] = $CategoriaService->getCategories();
+        $dataView['proveedores'] = $proovedorService->getProveedor();
 
-        return view('home', compact('products', 'categorias', 'proveedores'));
-
-
-    }
+        return view('home', $dataView);
+    }  
 
     public function createProducto(Request $request) {
         $validate = $request->validate([

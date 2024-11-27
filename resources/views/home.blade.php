@@ -145,10 +145,10 @@
         </select>
         <select name="id_proveedor" id="">
             <option value="" disabled selected>Select Provider</option>
-            {{-- @foreach ($proveedores as $proveedor ) 
+            @foreach ($proveedores as $proveedor ) 
                 <option value="{{ $proveedor->id }}">{{ $proveedor->nombre}}</option>
                 
-            @endforeach --}}
+            @endforeach
         </select>
         <input type="submit" value="Add Product">
     </form>
@@ -166,7 +166,7 @@
         </thead>
 
         <tbody>
-            {{-- @foreach ($products as $producto )
+            @foreach ($products as $producto )
             <tr>
                 <td> {{$producto->id}}</td>
                 <td>{{$producto->product}}</td>
@@ -178,13 +178,9 @@
                 </td>
                 <a href="{{route('deleteProduct', $producto->id)}}">Eliminar</a>
             </td>
-            <td>
-                <a href="#">Actualizar</a>    
-            </td>
-                
                 
             </tr>
-            @endforeach --}}
+            @endforeach
 
         </tbody>
     </table>
