@@ -31,28 +31,12 @@ Route::post('/categoria/add', [CategoriaController::class, 'createCategories'])-
 Route::get('/categoria/edit/{id}', [CategoriaController::class, 'setCategories'])->name('editCategoria');
 Route::get('/categoria/delete/{id}', [CategoriaController::class, 'deleteCategories'])->name('deleteCategoria');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('home', [HomeController::class, 'home']) -> name('home');
-});
+// Route::middleware('auth')->group(function () {
+//     Route::get('home', [HomeController::class, 'home']) -> name('home');
+// });
 
 require __DIR__.'/auth.php';

@@ -11,7 +11,6 @@
 <body>
 
     <style>
-        /* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +34,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Botones */
+
 .btn {
     display: inline-block;
     padding: 8px 16px;
@@ -55,7 +54,7 @@ a:hover {
     background-color: #0056b3;
 }
 
-/* Enlace principal */
+
 section {
     background-color: #007bff;
     color: white;
@@ -70,7 +69,7 @@ section:hover {
     background-color: #0056b3;
 }
 
-/* Formulario */
+
 form {
     background-color: white;
     padding: 20px;
@@ -100,7 +99,7 @@ form input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Tabla */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -155,6 +154,7 @@ tbody td a.btn-primary:hover {
     </a>
 
     <form action="{{route('add_proveedor')}}" method="post">
+        @csrf
         <input type="text" name="nombre" placeholder="nombre proveedor">
         <input type="text" name="direccion" placeholder="direccion proveedor">
         <input type="tel" name="telefono" placeholder="telefono proveedor">

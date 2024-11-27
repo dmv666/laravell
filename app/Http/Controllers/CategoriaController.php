@@ -13,10 +13,10 @@ class CategoriaController extends Controller
     }
     public function createCategories(Request $request){
         $validate = $request->validate([
-            'nombre' =>'required|unique:categorias|max:255',
-            'descripcion' =>'required'
+            'Nombre' =>'required|unique:categorias|max:255',
+            'Descripcion' =>'required'
         ]);
-        Categoria::created( $validate );
+        Categoria::create( $validate );
     }
     public function setCategories(Request $request){
         $category = $request->validate([
