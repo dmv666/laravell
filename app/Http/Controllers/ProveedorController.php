@@ -22,6 +22,7 @@ class ProveedorController extends Controller
             'descripcion' =>'required'
         ]);
         Proovedor::create($validate);
+        return redirect()->route('proveedor')->with('status', 'Proveedor creado con exito');
     }
 
     public function updateProveedor(Request $request) {
@@ -34,9 +35,15 @@ class ProveedorController extends Controller
             'descripcion' =>'required'
         ]);
         Proovedor::where('id', $request->id)->update($validate);
+        return redirect()->route('proveedor')->with('status', 'Proveedor actualizado con exito');
+    }
+    public function updateProveedorView($id) {
+        $proveedor = Proovedor::find($id);
+        return view('proveedorEdit', compact('proveedor'));
     }
 
     public function deleteProveedor($id) {
         Proovedor::destroy($id);
+        return redirect()->route('proveedor')->with('status', 'Proveedor eliminado con exito');
     }
 }

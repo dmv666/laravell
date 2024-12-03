@@ -17,17 +17,25 @@ class CategoriaController extends Controller
             'Descripcion' =>'required'
         ]);
         Categoria::create( $validate );
+        return redirect()->route('categoria')->with('status', 'actualizado con exito');
     }
-    public function setCategories(Request $request){
+    public function editCategories(Request $request){
         $category = $request->validate([
             'nombre' =>'required|max:255',
             'descripcion' =>'required'
         ]);
         Categoria::where('id', $request-> id)->update($category);
+        return redirect()->route('categoria')->with('status', 'actualizado con exito');
+    }
+    
+    public function editCategoriesView($id){
+        $categorias = Categoria::find($id);
+        return view('categoriaEdit', compact('categorias'));
     }
 
     public function deleteCategories($id){
         Categoria::destroy($id);
+        return redirect()->route('categoria')->with('status', 'Eliminado con exito');
     }
 
 }

@@ -28,17 +28,25 @@ class ProductoController extends Controller
             'id_proveedor' =>'required'
         ]);
         Producto::create($validate);
+        return redirect()->route('home')->with('status', 'producto creado con exito');
     }
+    
 
-    public function updateProducto(Request $request, $id) {
+    public function editProducto(Request $request) {
         $producto = $request->validate([
             'product' =>'required|unique:productos|max:30',
             'price' =>'required',
-            'stock' =>'required',
-            'id_categoria' =>'required',
-            'id_proveedor' =>'required'
+            'stock' =>'required'
         ]);
-        Producto::where('id', $id)->update($producto);
+        Producto::where('id', $request-> id)->update($producto);
+        return redirect()->route('home')->with('status', 'actualizado con exito');
+        
+    }
+    public function editProductoView($id){
+        $producto = Producto::find($id);
+        
+        
+        return view('productoEdit', compact('producto'));
     }
 
     public function deleteProducto($id) {
