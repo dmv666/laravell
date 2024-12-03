@@ -1,21 +1,21 @@
-/* General body styles */
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa; /* Fondo blanco suave */
-    color: #333; /* Texto en gris oscuro */
+    background-color: #f8f9fa; 
+    color: #333; 
     margin: 0;
     padding: 0;
 }
 
-/* Links */
+
 a {
     text-decoration: none;
-    color: #007bff; /* Azul suave */
+    color: #007bff; 
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #0056b3; /* Azul más oscuro en hover */
+    color: #0056b3; 
 }
 
 /* Section buttons */
@@ -23,10 +23,10 @@ section {
     display: inline-block;
     padding: 15px 25px;
     margin: 10px;
-    background-color: #ffffff; /* Blanco puro */
-    color: #333; /* Texto oscuro */
+    background-color: #ffffff; 
+    color: #333; 
     border-radius: 8px;
-    border: 1px solid #ddd; /* Borde gris claro */
+    border: 1px solid #ddd; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -36,15 +36,15 @@ section:hover {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Forms */
+
 form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff; 
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd; /* Borde gris claro */
+    border: 1px solid #ddd; 
 }
 
 form input,
@@ -53,10 +53,10 @@ form select {
     width: 95%;
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ccc; /* Borde gris */
+    border: 1px solid #ccc; 
     border-radius: 5px;
     font-size: 1rem;
-    background-color: #f9f9f9; /* Gris muy claro */
+    background-color: #f9f9f9; 
     color: #333;
 }
 
@@ -64,12 +64,12 @@ form input:focus,
 form textarea:focus,
 form select:focus {
     outline: none;
-    border-color: #007bff; /* Azul suave */
+    border-color: #007bff; 
     box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
 }
 
 form input[type="submit"] {
-    background-color: #007bff; /* Azul */
+    background-color: #007bff; 
     width: 99%;
     color: white;
     border: none;
@@ -79,15 +79,15 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #0056b3; /* Azul más oscuro */
+    background-color: #0056b3;
 }
 
-/* Table */
+
 table {
     width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #ffffff; /* Blanco */
+    background-color: #ffffff; 
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -95,7 +95,7 @@ table {
 }
 
 table thead {
-    background-color: #f1f1f1; /* Gris claro */
+    background-color: #f1f1f1; 
     color: #333;
     text-align: left;
 }
@@ -107,23 +107,23 @@ table td {
 }
 
 table tbody tr:hover {
-    background-color: #f9f9f9; /* Fondo gris claro al pasar el ratón */
+    background-color: #f9f9f9; 
 }
 
 table tbody tr td a {
-    color: #007bff; /* Azul */
+    color: #007bff; 
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 table tbody tr td a:hover {
-    color: #0056b3; /* Azul más oscuro */
+    color: #0056b3; 
 }
 
 /* Buttons */
 .btn {
     padding: 10px 15px;
-    background-color: #007bff; /* Azul */
+    background-color: #007bff; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -135,13 +135,13 @@ table tbody tr td a:hover {
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Azul más oscuro */
+    background-color: #0056b3; 
     transform: scale(1.05);
 }
 
 .btn-delete {
     padding: 10px 15px;
-    background-color: #ff0037; /* Azul */
+    background-color: #ff0037; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -153,15 +153,15 @@ table tbody tr td a:hover {
 }
 
 .btn-delete:hover {
-    background-color: #b30000; /* Azul más oscuro */
+    background-color: #b30000;
     transform: scale(1.05);
 }
 
 
 article {
     display: flex;
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    background-color: #f8f9fa; /* Fondo blanco suave */
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f8f9fa; 
     margin: 0;
 }
