@@ -18,8 +18,8 @@
 
     <form action="{{route('add_categoria')}}" method="post">
         @csrf
-        <input type="text" name="Nombre" placeholder="nombre categoria">
-        <textarea name="Descripcion" placeholder="descripcion" cols="30" rows="10"></textarea>
+        <input type="text" name="nombre" placeholder="nombre categoria">
+        <textarea name="descripcion" placeholder="descripcion" cols="30" rows="10"></textarea>
         <input type="submit" value="Crear categoria">
     </form>
 
